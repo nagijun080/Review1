@@ -1,0 +1,41 @@
+public class Person {
+	
+	static String ji = "氏";
+	static String na = "名";
+	String firstname;
+	String lastname;
+
+	String getFirstName() {
+		return firstname;
+	}
+	void setFirstName (String first_name) {
+	 	firstname = first_name;
+	}
+
+	String getLastName () {
+		return lastname;
+	}
+
+	void setLastName(String last_name) {
+		lastname = last_name;
+	}
+
+	void showName(){
+		System.out.println(ji + ":" + getLastName() + " " + na + getFirstName());
+	}
+
+	public static void main(){
+		String[] first = new { "渡辺" ,
+								"和田" ,};
+		String[] last = new { "高志"　,
+								"充史",};
+		Integer i;
+
+		for (i = 0;i < first.length;i++) {
+			Person human = new Person();
+			human.setLastName(last[i]);
+			human.setFirstName(first[i]);
+			human.showName();
+		}						
+	}
+}
